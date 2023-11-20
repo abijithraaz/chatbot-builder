@@ -6,10 +6,6 @@ from prompt_augmentor import PromptAugmentor
 from embedding.openai_embedd_generator import OpenaiEmbeddGenarator
 
 
-#proxy
-os.environ['HTTP_PROXY'] = 'http://de001-surf.zone2.proxy.allianz:8080'
-os.environ['HTTPS_PROXY'] = 'http://de001-surf.zone2.proxy.allianz:8080'
-
 # Env variables
 os.environ['OPENAI_KEY'] = ''
 os.environ['OPENAI_EMBEDD_MODEL'] = 'text-embedding-ada-002'
