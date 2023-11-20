@@ -7,7 +7,7 @@ from embedding.openai_embedd_generator import OpenaiEmbeddGenarator
 
 
 # Env variables
-os.environ['OPENAI_KEY'] = ''
+os.environ['OPENAI_API_KEY'] = ''
 os.environ['OPENAI_EMBEDD_MODEL'] = 'text-embedding-ada-002'
 os.environ['PINECONE_API_KEY'] = ''
 os.environ['PINECONE_ENVIRONMENT'] = 'gcp-starter'
