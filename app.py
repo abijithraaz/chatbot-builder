@@ -11,9 +11,9 @@ os.environ['HTTP_PROXY'] = 'http://de001-surf.zone2.proxy.allianz:8080'
 os.environ['HTTPS_PROXY'] = 'http://de001-surf.zone2.proxy.allianz:8080'
 
 # Env variables
-os.environ['OPENAI_KEY'] = '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'
+os.environ['OPENAI_KEY'] = ''
 os.environ['OPENAI_EMBEDD_MODEL'] = 'text-embedding-ada-002'
-os.environ['PINECONE_API_KEY'] = '12e14668-550c-4589-be6b-c904a9a0cb23'
+os.environ['PINECONE_API_KEY'] = ''
 os.environ['PINECONE_ENVIRONMENT'] = 'gcp-starter'
 os.environ['PINECONE_INDEX_NAME'] = 'chatter-db'
 
