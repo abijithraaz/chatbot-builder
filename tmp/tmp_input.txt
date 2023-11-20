@@ -1,0 +1,25 @@
+---------------KT to Jo---------------------
+
+
+* Fleetbot - Abijith and Athira
+	- CRP2.0
+		- S3 model storage
+		- Docker file changes
+		- Configuration changes
+	- DE MVP3
+		- Fleet-list providers
+		- Parked requirements.
+		- Challenges and recommended solutions.
+
+* Swiss Classification - Athira
+	- CRP2.0 migration
+		- S3 model storage
+		- Docker file changes
+		- Configuration changes
+	- Under UAT
+
+* Italy Invoice - Nikhil
+	- CRP2.0 migration
+		- S3 model storage
+		- Docker file changes
+		- Configuration changes
