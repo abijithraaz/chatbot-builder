@@ -14,7 +14,6 @@ class PromptAugmentor:
         llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
 
         qa = RetrievalQA.from_chain_type(
-        prompt=prompt,
         llm=llm,
         chain_type="stuff",
         retriever=vectorstore.as_retriever())
