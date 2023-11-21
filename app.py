@@ -7,13 +7,12 @@ from embedding.openai_embedd_generator import OpenaiEmbeddGenarator
 
 
 # Env variables
-'''
-os.environ['OPENAI_API_KEY'] = ''
-os.environ['OPENAI_EMBEDD_MODEL'] = 'text-embedding-ada-002'
-os.environ['PINECONE_API_KEY'] = ''
-os.environ['PINECONE_ENVIRONMENT'] = 'gcp-starter'
-os.environ['PINECONE_INDEX_NAME'] = 'chatter-db'
-'''
+
+# os.environ['OPENAI_API_KEY'] = ''
+# os.environ['OPENAI_EMBEDD_MODEL'] = 'text-embedding-ada-002'
+# os.environ['PINECONE_API_KEY'] = ''
+# os.environ['PINECONE_ENVIRONMENT'] = 'gcp-starter'
+# os.environ['PINECONE_INDEX_NAME'] = 'chatter-db'
 
 # calling openai service
 openai_chat = OpenAiLLM()
