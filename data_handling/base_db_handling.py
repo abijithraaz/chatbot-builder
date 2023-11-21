@@ -7,3 +7,11 @@ class DataStoring(abc.ABC):
         """
         Storing the embedded chunks
         """
+
+class DBModify(abc.ABC):
+
+    @abc.abstractmethod
+    def modify_db(self, sql_query):
+        """
+        Modifying the vector DB
+        """
