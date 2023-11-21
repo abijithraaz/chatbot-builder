@@ -10,6 +10,7 @@ class PineconeDB(DataStoring):
         pinecone.init(api_key=os.getenv('PINECONE_API_KEY', ''), environment=os.getenv('PINECONE_ENVIRONMENT', ''))
 
     def vectordata_storing(self, document_chunks, embedd_obj):
+        vector_lists = []
         index = pinecone.Index(os.environ['PINECONE_INDEX_NAME'])
         # wait a moment for the index to be fully initialized
         time.sleep(1)
@@ -17,6 +18,7 @@ class PineconeDB(DataStoring):
         # print('DocumentsChunks:',document_chunks)
         for ind, row in document_chunks.iterrows():
             vector_data = {'id':str(ind), 'values': row['embeddings'],'metadata': {'text': row['text']}}
-            index.upsert([vector_data])
+            vector_lists.append(vector_data)
+        index.upsert(vector_lists)
         print('Vector data storing completed!!!!')
         return True
