@@ -21,8 +21,8 @@ embedd = OpenaiEmbeddGenarator()
 
 # UI section
 st.header(body='Chatter🤗💬', divider='rainbow')
-st.markdown(body= 'Chatter is also known as Chat Bot Builder')
-st.subheader(body='ChatBot')
+st.markdown(body= 'Chatter wil help you to create customized Chatbot.')
+st.subheader(body='Customized-Chatbot')
 
 # Initialize chat history
 if "messages" not in st.session_state:
