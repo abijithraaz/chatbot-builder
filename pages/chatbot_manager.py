@@ -11,7 +11,7 @@ chunkscreator = LangChainChunkCreator()
 embedd_creator = OpenaiEmbeddGenarator()
 pinecone_db = PineconeDB()
 
-st.header('Chatbot Manager',divider='rainbow')
+st.header('Chatbot Manager 💬👷',divider='rainbow')
 st.markdown('We can customize the chatbot using this page')
 
 st.markdown('Upload custom text file data to cutomize the chatbot')
