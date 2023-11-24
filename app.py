@@ -50,8 +50,9 @@ if query := st.chat_input('Please write your query...'):
     st.session_state.messages.append({"role":"assistant", "content":chat_response})
 
 # Clear chat button
-if button := st.button('CLEAR CHAT'):
-    if "messages" in st.session_state:
-        st.session_state.messages = []
+with st.sidebar:
+    if button := st.button('CLEAR CHAT'):
+        if "messages" in st.session_state:
+            st.session_state.messages = []
 
     
