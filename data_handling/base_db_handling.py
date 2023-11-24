@@ -11,7 +11,7 @@ class DataStoring(abc.ABC):
 class DBModify(abc.ABC):
 
     @abc.abstractmethod
-    def clear_db(self, sql_query):
+    def clear_db(self, sql_query=''):
         """
         Modifying the vector DB
         """
