@@ -20,9 +20,9 @@ rag_client = PromptAugmentor()
 embedd = OpenaiEmbeddGenarator()
 
 # UI section
-st.header(body='Chatter', divider='rainbow')
-st.markdown(body= 'Chatter is also known as Chat Bot Builder')
-st.subheader(body='ChatBot')
+st.header(body='Chatter🤗💬', divider='rainbow')
+st.markdown(body= 'Chatter wil help you to create customized Chatbot.')
+st.subheader(body='Customized-Chatbot')
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -49,5 +49,10 @@ if query := st.chat_input('Please write your query...'):
     # Adding response to history
     st.session_state.messages.append({"role":"assistant", "content":chat_response})
 
+# Clear chat button
+with st.sidebar:
+    if button := st.button('CLEAR CHAT', type='primary',use_container_width=True):
+        if "messages" in st.session_state:
+            st.session_state.messages = []
 
     

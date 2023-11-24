@@ -11,7 +11,7 @@ chunkscreator = LangChainChunkCreator()
 embedd_creator = OpenaiEmbeddGenarator()
 pinecone_db = PineconeDB()
 
-st.header('Chatbot Manager',divider='rainbow')
+st.header('Chatbot Manager 💬👷',divider='rainbow')
 st.markdown('We can customize the chatbot using this page')
 
 st.markdown('Upload custom text file data to cutomize the chatbot')
@@ -22,6 +22,6 @@ if input_file and button:
     loaded_data = dataloader.load_data(input_file)
     data_chunks = chunkscreator.create_chunks(loaded_data)
     vector_dataset = embedd_creator.embedd_generator(data_frame=data_chunks)
-    # print(vector_dataset)
     datawrite = pinecone_db.vectordata_storing(data_chunks, embedd)
-    print("COmpleted")
+    if datawrite:
+        st.markdown('Chatbot customization and DB modifications are completed.')

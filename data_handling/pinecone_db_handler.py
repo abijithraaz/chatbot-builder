@@ -3,9 +3,9 @@ import pinecone
 import time
 from langchain.vectorstores import Pinecone
 
-from data_handling.base_db_handling import DataStoring
+from data_handling.base_db_handling import DataStoring, DBModify
 
-class PineconeDB(DataStoring):
+class PineconeDB(DataStoring, DBModify):
     def __init__(self) -> None:
         pinecone.init(api_key=os.getenv('PINECONE_API_KEY', ''), environment=os.getenv('PINECONE_ENVIRONMENT', ''))
 
@@ -18,5 +18,10 @@ class PineconeDB(DataStoring):
         for ind, row in document_chunks.iterrows():
             vector_data = {'id':str(ind), 'values': row['embeddings'],'metadata': {'text': row['text']}}
             index.upsert([vector_data])
-        print('Vector data storing completed!!!!')
+        return True
+
+    def clear_db(self, sql_query=''):
+        # db clearing method
+        index = pinecone.Index(os.environ['PINECONE_INDEX_NAME'])
+        index.delete(delete_all=True)
         return True
