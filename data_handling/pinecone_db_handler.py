@@ -27,3 +27,4 @@ class PineconeDB(DataStoring, DBModify):
         # db clearing method
         index = pinecone.Index(os.environ['PINECONE_INDEX_NAME'])
         index.delete(delete_all=True)
+        return True
