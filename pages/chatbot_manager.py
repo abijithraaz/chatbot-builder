@@ -22,6 +22,13 @@ if input_file and button:
     loaded_data = dataloader.load_data(input_file)
     data_chunks = chunkscreator.create_chunks(loaded_data)
     vector_dataset = embedd_creator.embedd_generator(data_frame=data_chunks)
-    # print(vector_dataset)
     datawrite = pinecone_db.vectordata_storing(data_chunks, embedd)
-    print("COmpleted")
+    if datawrite:
+        st.markdown('Chatbot customization is completed.')
+        
+st.markdown('Please write DELETE in the inpu section to clear the DB')
+input_file = st.text_input(label='DELETE Query')
+button = st.button(label='CLEAR CUSTOMIZATION')
+
+if input_file=='DELETE' and button:
+    pass
