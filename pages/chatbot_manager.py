@@ -31,4 +31,6 @@ input_file = st.text_input(label='DELETE Query')
 button = st.button(label='CLEAR CUSTOMIZATION')
 
 if input_file=='DELETE' and button:
-    pass
+    clr_flag = pinecone_db.clear_db()
+    if clr_flg:
+        st.markdown('Chatbot DB is completely wiped.')
