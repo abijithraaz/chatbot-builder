@@ -5,7 +5,7 @@ A chat bot builder app
 ## Environmental variables
 Please set these environmental variable before running the solution.
 | Environment Variables      | Description | Default |
-| :---        |    :----:   |    ----:    |
+| :----        |    :-----:   |    ---:    |
 | ```OPENAI_API_KEY```      | OpenAI api key       |    |
 | ```OPENAI_EMBEDD_MODEL```   | Name of the openAI embedding model        |    ```text-embedding-ada-002```  |
 | ```PINECONE_API_KEY```      | Pinecone vectorDB key       |    |
