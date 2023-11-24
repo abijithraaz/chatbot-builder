@@ -20,7 +20,7 @@ rag_client = PromptAugmentor()
 embedd = OpenaiEmbeddGenarator()
 
 # UI section
-st.header(body='Chatter🤗💬', divider='rainbow')
+st.header(body='Chatbot-Builder 🤗💬', divider='rainbow')
 st.markdown(body= 'Chatter wil help you to create customized Chatbot.')
 st.subheader(body='Customized-Chatbot')
 
