@@ -19,9 +19,7 @@ class PineconeDB(DataStoring, DBModify):
         for ind, row in document_chunks.iterrows():
             vector_data = {'id':str(ind), 'values': row['embeddings'],'metadata': {'text': row['text']}}
             vector_lists.append(vector_data)
-        # index.upsert(vectors=vector_lists, namespace='chatbot')
         index.upsert(vector_lists)
-        print('Vector data storing completed!!!!')
         return True
 
     def clear_db(self, sql_query=''):
