@@ -32,10 +32,6 @@ if "messages" not in st.session_state:
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message['content'])
-        
-# Clear chat button
-if button := st.button('CLEAR CHAT'):
-    st.session_state.messages = []
 
 # Accept user input and process
 if query := st.chat_input('Please write your query...'):
@@ -53,6 +49,8 @@ if query := st.chat_input('Please write your query...'):
     # Adding response to history
     st.session_state.messages.append({"role":"assistant", "content":chat_response})
 
-
+# Clear chat button
+if button := st.button('CLEAR CHAT'):
+    st.session_state.messages = []
 
     
