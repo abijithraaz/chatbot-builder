@@ -17,7 +17,8 @@ class PineconeDB(DataStoring, DBModify):
 
         # print('DocumentsChunks:',document_chunks)
         for ind, row in document_chunks.iterrows():
-            vector_data = {'id':str(ind), 'values': row['embeddings'],'metadata': {'text': row['text']}}
+            vector_data = (str(ind), row['embeddings'], {"text": row['text']})
+            # vector_data = {'id':str(ind), 'values': row['embeddings'],'metadata': {'text': row['text']}}
             vector_lists.append(vector_data)
         index.upsert(vector_lists)
         return True
