@@ -15,6 +15,8 @@ Please set these environmental variable before running the solution.
 ## How to Run
 After download the chatter repository, need to follow the mentioned steps.
 - Install all the requested packages using this command before running the solution.
+
     ``` pip install -r requirements.txt ```
 - To run the solution please type the below commands
-    ``` streamlit run app.py ```
+
+  ``` streamlit run app.py ```
