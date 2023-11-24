@@ -19,6 +19,10 @@ openai_chat = OpenAiLLM()
 rag_client = PromptAugmentor()
 embedd = OpenaiEmbeddGenarator()
 
+#sidebar
+with st.sidebar:
+    st.title('🤗💬 Chatter')
+
 # UI section
 st.header(body='Chatter', divider='rainbow')
 st.markdown(body= 'Chatter is also known as Chat Bot Builder')
