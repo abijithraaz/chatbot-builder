@@ -49,7 +49,7 @@ if query := st.chat_input('Please write your query...'):
     # Adding response to history
     st.session_state.messages.append({"role":"assistant", "content":chat_response})
 # Clear chat button
-if button:= st.button('CLEAR CHAT'):
+if button == st.button('CLEAR CHAT'):
     st.session_state.messages = []
 
 
