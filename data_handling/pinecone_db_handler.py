@@ -19,7 +19,7 @@ class PineconeDB(DataStoring, DBModify):
         for ind, row in document_chunks.iterrows():
             vector_data = {'id':str(ind), 'values': row['embeddings'],'metadata': {'text': row['text']}}
             vector_lists.append(vector_data)
-        index.upsert(vector_lists)
+        index.upsert(vectors=vector_lists, namespace='chatbot')
         print('Vector data storing completed!!!!')
         return True
 
