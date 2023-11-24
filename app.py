@@ -51,6 +51,7 @@ if query := st.chat_input('Please write your query...'):
 
 # Clear chat button
 if button := st.button('CLEAR CHAT'):
-    st.session_state.messages = []
+    if "messages" in st.session_state:
+        st.session_state.messages = []
 
     
