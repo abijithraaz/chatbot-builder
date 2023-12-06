@@ -3,9 +3,11 @@ A customized chat bot builder app
 ## Usecase
 - Built a generic prototype chatbot builder application for particular use-case.
 ### Chatbot-Customizer
-[image]tmp/customizer.PNG
+- We can set out context by providing the context data in this customizer page.
+![image](tmp/customizer.PNG)
 ### Customized chatbot for interaction.
-
+- We can interact the customized chatbot through this page.
+![image](tmp/customized_chatbot.PNG)
 
 ## Environmental variables
 Please set these environmental variable before running the solution.
