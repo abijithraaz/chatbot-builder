@@ -1,7 +1,12 @@
 # Chatter
-A chat bot builder app
+A customized chat bot builder app
 ## Usecase
--
+- Built a generic prototype chatbot builder application for particular use-case.
+### Chatbot-Customizer
+
+### Customized chatbot for interaction.
+
+
 ## Environmental variables
 Please set these environmental variable before running the solution.
 | Environment Variables      | Description | Default |
