@@ -3,7 +3,7 @@ A customized chat bot builder app
 ## Usecase
 - Built a generic prototype chatbot builder application for particular use-case.
 ### Chatbot-Customizer
-!image[tmp/customizer.PNG]
+[image][tmp/customizer.PNG]
 ### Customized chatbot for interaction.
 
 
