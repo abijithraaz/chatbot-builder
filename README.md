@@ -1,5 +1,5 @@
-# Chatter
-A customized chat bot builder app
+# Chatbot-builder
+A customized chat bot builder app using RAG mechanism.
 ## Usecase
 - Built a generic prototype chatbot builder application for particular use-case.
 ### Chatbot-Customizer
